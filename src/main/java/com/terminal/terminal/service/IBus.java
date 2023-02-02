@@ -7,4 +7,5 @@ import java.util.List;
 public interface IBus {
 
     List<Bus> obtenerBuses();
+    Bus agregarBus(Bus bus);
 }
