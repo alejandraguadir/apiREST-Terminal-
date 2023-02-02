@@ -49,13 +49,20 @@ public class TerminalRepository {
     public void asignaPasajerosABus(){
 
     }
-    //Mostrar buses disponibles
+    //Metodo para mostrar buses disponibles
     public List<Bus> mostrarBuses(){
         return buses;
     }
 
-    //Crear buses
+    //Metodo para Crear buses
     public void agregarBus(Bus bus){buses.add(bus);}
 
+    //Metodo para mostrar  pasajeros
+    public List<Pasajero> mostrarPasajeros(){
+        return pasajeros;
+    }
+
+    //Metodo para crear pasajeros
+    public void agregarPasajero(Pasajero pasajero){pasajeros.add(pasajero);}
 
 }

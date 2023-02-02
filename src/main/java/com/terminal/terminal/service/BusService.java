@@ -17,11 +17,14 @@ public class BusService implements IBus {
 
     @Autowired
     private TerminalRepository terminalRepository;
+
+    //Metodo para obtener buses
     @Override
     public List<Bus> obtenerBuses() {
         return terminalRepository.mostrarBuses();
     }
 
+    //Metodo para agregar buses
     @Override
     public Bus agregarBus(Bus bus) {
         Bus addBus = new Bus(UUID.randomUUID().toString(),

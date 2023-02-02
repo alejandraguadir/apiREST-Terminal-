@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.*;
 public class BusController {
 
     @Autowired
-    private IBus service;
+    private IBus serviceBus;
 
     @GetMapping("/buses")
     public ResponseEntity obtenerBuses(){
-        return new ResponseEntity(service.obtenerBuses(), HttpStatus.FOUND);
+        return new ResponseEntity(serviceBus.obtenerBuses(), HttpStatus.FOUND);
     }
 
     @PostMapping("/bus")
-    public ResponseEntity agregarBuses(@RequestBody Bus bus){ return new ResponseEntity(service.agregarBus(bus), HttpStatus.CREATED);}
+    public ResponseEntity agregarBuses(@RequestBody Bus bus){ return new ResponseEntity(serviceBus.agregarBus(bus), HttpStatus.CREATED);}
 
 
 
