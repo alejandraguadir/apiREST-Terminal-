@@ -8,4 +8,5 @@ public interface IBus {
 
     List<Bus> obtenerBuses();
     Bus agregarBus(Bus bus);
+    void eliminarBus(String id);
 }

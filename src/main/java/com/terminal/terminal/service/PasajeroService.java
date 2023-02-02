@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
+
 
 @Service
 public class PasajeroService implements IPasajero {
@@ -33,7 +33,8 @@ public class PasajeroService implements IPasajero {
 
     @Override
     public void eliminarPasajero(String id) {
-        terminalRepository.mostrarPasajeros().removeIf(p -> p.getId().equals(id));
+        terminalRepository.eliminarPasajero(id);
+        //terminalRepository.mostrarPasajeros().removeIf(p -> p.getId().equals(id));
     }
 
 

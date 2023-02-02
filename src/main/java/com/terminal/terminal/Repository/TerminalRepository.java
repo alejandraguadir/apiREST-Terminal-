@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Repository
 public class TerminalRepository {
@@ -59,6 +58,10 @@ public class TerminalRepository {
     //Metodo para Crear buses
     public void agregarBus(Bus bus) {
         buses.add(bus);
+    }
+    //Metodo para eliminar buses
+    public void eliminarBus(String id) {
+        buses.removeIf(bus -> bus.getId().equals(id));
     }
 
     //Metodo para mostrar  pasajeros

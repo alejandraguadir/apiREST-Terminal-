@@ -1,6 +1,5 @@
 package com.terminal.terminal.Controller;
 
-
 import com.terminal.terminal.Model.Bus;
 import com.terminal.terminal.service.IBus;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +22,11 @@ public class BusController {
     @PostMapping("/bus")
     public ResponseEntity agregarBuses(@RequestBody Bus bus){ return new ResponseEntity(serviceBus.agregarBus(bus), HttpStatus.CREATED);}
 
+    @DeleteMapping("/bus/{id}")
+    public ResponseEntity eliminarBus(@PathVariable String id) {
+        serviceBus.eliminarBus(id);
+        return new ResponseEntity(HttpStatus.OK);
+    }
 
 
 

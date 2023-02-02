@@ -1,6 +1,4 @@
 package com.terminal.terminal.Controller;
-
-import com.terminal.terminal.Model.Bus;
 import com.terminal.terminal.Model.Pasajero;
 import com.terminal.terminal.service.IPasajero;
 import org.springframework.beans.factory.annotation.Autowired;
