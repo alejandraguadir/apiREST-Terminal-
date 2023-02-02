@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class TerminalRepository {
@@ -17,7 +18,7 @@ public class TerminalRepository {
 
     public TerminalRepository() {
         this.nombre = "Terminal Capital";
-        buses = new ArrayList<>(List.of(new Bus("1","456A",23)));
+        buses = new ArrayList<>(List.of(new Bus("1", "456A", 23)));
 
         destinos = new ArrayList<>(List.of(new Destino("Bogotá", 3456.2),
                 new Destino("Popayan", 50000.2),
@@ -25,7 +26,7 @@ public class TerminalRepository {
                 new Destino("Cali", 50000.2),
                 new Destino("Cartagena", 90000.2)));
 
-        pasajeros = new ArrayList<>(List.of(new Pasajero("p1","Ana", "Rivera")));
+        pasajeros = new ArrayList<>(List.of(new Pasajero("p1", "Ana", "Rivera")));
     }
 
     @Override
@@ -38,31 +39,41 @@ public class TerminalRepository {
                 '}';
     }
 
-    public void asignaDestinoDeViaje(){
+    public void asignaDestinoDeViaje() {
 
     }
 
-    public void asignaBusParaDestino(){
+    public void asignaBusParaDestino() {
 
     }
 
-    public void asignaPasajerosABus(){
+    public void asignaPasajerosABus() {
 
     }
+
     //Metodo para mostrar buses disponibles
-    public List<Bus> mostrarBuses(){
+    public List<Bus> mostrarBuses() {
         return buses;
     }
 
     //Metodo para Crear buses
-    public void agregarBus(Bus bus){buses.add(bus);}
+    public void agregarBus(Bus bus) {
+        buses.add(bus);
+    }
 
     //Metodo para mostrar  pasajeros
-    public List<Pasajero> mostrarPasajeros(){
+    public List<Pasajero> mostrarPasajeros() {
         return pasajeros;
     }
 
     //Metodo para crear pasajeros
-    public void agregarPasajero(Pasajero pasajero){pasajeros.add(pasajero);}
+    public void agregarPasajero(Pasajero pasajero) {
+        pasajeros.add(pasajero);
+    }
+
+    //Metodo para eliminar pasajeros
+    public void eliminarPasajero(String id) {
+        pasajeros.removeIf(pasajero -> pasajero.getId().equals(id));
+    }
 
 }

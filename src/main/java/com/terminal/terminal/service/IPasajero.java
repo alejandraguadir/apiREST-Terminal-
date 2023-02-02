@@ -8,4 +8,9 @@ public interface IPasajero {
 
     List<Pasajero> obtenerPasajeros();
     Pasajero agregarPasajero(Pasajero pasajero);
+
+    void eliminarPasajero(String id);
+
+
+
 }

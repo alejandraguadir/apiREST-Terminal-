@@ -15,12 +15,20 @@ public class PasajeroController {
     private IPasajero servicePasajero;
 
     @GetMapping("/pasajeros")
-    public ResponseEntity obtenerPasajeros(){
+    public ResponseEntity obtenerPasajeros() {
         return new ResponseEntity(servicePasajero.obtenerPasajeros(), HttpStatus.FOUND);
     }
 
     @PostMapping("/pasajero")
-    public ResponseEntity agregarPasajero(@RequestBody Pasajero pasajero){ return new ResponseEntity(servicePasajero.agregarPasajero(pasajero), HttpStatus.CREATED);}
+    public ResponseEntity agregarPasajero(@RequestBody Pasajero pasajero) {
+        return new ResponseEntity(servicePasajero.agregarPasajero(pasajero), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/pasajero/{id}")
+    public ResponseEntity eliminarPasajero(@PathVariable String id) {
+        servicePasajero.eliminarPasajero(id);
+        return new ResponseEntity(HttpStatus.OK);
+    }
 
 
 }
