@@ -6,7 +6,7 @@ import java.util.List;
 public interface IDestino {
     List<Destino> obtenerDestinos();
     Destino agregarDestino(Destino destino);
-    void actualizarDestino(String id);
+    void actualizarDestino(Destino destino);
     void eliminarDestino(String id);
 
 

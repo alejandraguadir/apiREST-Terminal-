@@ -34,6 +34,11 @@ public class ViajeService implements IViajeService {
      *         nuevoViaje.setDestinos(destinoSeleccionado);
      *         nuevoViaje.getPasajeros(pasajerosRegistrados);
      *     }
+     *
+     @Override
+     public void registrarPasajeroEnBus(List<Bus> busSeleccionado, List<Pasajero> pasajerosRegistrados) {
+
+     }
      */
 
     //Registrar el bus en un destino
@@ -48,7 +53,8 @@ public class ViajeService implements IViajeService {
     }
 
     @Override
-    public void registrarPasajeroEnBus(List<Bus> busSeleccionado, List<Pasajero> pasajerosRegistrados) {
-
+    public List<Viaje> obtenerViajes() {
+        return viajeRepository.obtenerViajes();
     }
+
 }

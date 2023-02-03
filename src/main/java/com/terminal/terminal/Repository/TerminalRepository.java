@@ -5,7 +5,6 @@ import com.terminal.terminal.Model.Destino;
 import com.terminal.terminal.Model.Pasajero;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -61,11 +60,22 @@ public class TerminalRepository {
         destinos.add(destino);
     }
 
+    /**
+     *   Metodo para actualizar destino
+     *     public List<Destino> actualizarDestino(String id){
+     *
+     *         List<Destino> newDestino = destinos.stream().map(d -> d.getId().equals(id) ? destinos : d).collect(Collectors.toList());
+     *         this.destinos = newDestino;
+     *         return destinos;
+     *     }
+     */
+
+
+
     //Metodo para eliminar destino
     public void eliminarDestino(String id) {
         destinos.removeIf(destino -> destino.getId().equals(id));
     }
-
 
     //Metodo para mostrar buses disponibles
     public List<Bus> mostrarBuses() {

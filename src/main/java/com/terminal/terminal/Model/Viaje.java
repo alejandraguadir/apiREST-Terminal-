@@ -9,7 +9,9 @@ public class Viaje {
     private List<Destino> destinos;
     private List<Bus> buses;
     private List<Pasajero> pasajeros;
-/**
+
+
+    /**
  * Constructor
  */
 
