@@ -1,4 +1,4 @@
-package com.terminal.terminal.service;
+package com.terminal.terminal.serviceInterface;
 
 import com.terminal.terminal.Model.Pasajero;
 

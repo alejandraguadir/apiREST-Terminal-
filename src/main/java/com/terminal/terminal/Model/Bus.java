@@ -36,4 +36,8 @@ public class Bus {
     public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
     }
+
+    public void disminuirPuestos(){
+        this.capacidad --;
+    }
 }

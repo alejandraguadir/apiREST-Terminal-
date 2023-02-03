@@ -1,7 +1,7 @@
 package com.terminal.terminal.Controller;
 
 import com.terminal.terminal.Model.Bus;
-import com.terminal.terminal.service.IBus;
+import com.terminal.terminal.serviceInterface.IBus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

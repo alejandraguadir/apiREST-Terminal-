@@ -2,6 +2,7 @@ package com.terminal.terminal.service;
 
 import com.terminal.terminal.Model.Pasajero;
 import com.terminal.terminal.Repository.TerminalRepository;
+import com.terminal.terminal.serviceInterface.IPasajero;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

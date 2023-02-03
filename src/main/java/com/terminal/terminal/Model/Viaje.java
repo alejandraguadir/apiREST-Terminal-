@@ -6,8 +6,8 @@ import java.util.List;
 public class Viaje {
     private String id;
     private String date;
-    private List<Destino> destinoAsignado;
-    private List<Bus> busAsignado;
+    private List<Destino> destinos;
+    private List<Bus> buses;
     private List<Pasajero> pasajeros;
 /**
  * Constructor
@@ -16,45 +16,49 @@ public class Viaje {
     public Viaje(String id, String date) {
         this.id = id;
         this.date = date;
-        this.destinoAsignado =  new ArrayList<>();
-        this.busAsignado =  new ArrayList<>();
-        this.pasajeros =  new ArrayList<>();
+        this.destinos=  new ArrayList<>();
+        this.buses =  new ArrayList<>();
+        this.pasajeros=  new ArrayList<>();
     }
+
+    /**
+     * Consultores y Modificadores
+     */
 
     public String getId() {
         return id;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public List<Destino> getDestinoAsignado() {
-        return destinoAsignado;
-    }
-
-    public List<Bus> getBusAsignado() {
-        return busAsignado;
-    }
-
-    public List<Pasajero> getPasajeros() {
-        return pasajeros;
     }
 
     public void setId(String id) {
         this.id = id;
     }
 
+    public String getDate() {
+        return date;
+    }
+
     public void setDate(String date) {
         this.date = date;
     }
 
-    public void setDestinoAsignado(List<Destino> destinoAsignado) {
-        this.destinoAsignado = destinoAsignado;
+    public List<Destino> getDestinos() {
+        return destinos;
     }
 
-    public void setBusAsignado(List<Bus> busAsignado) {
-        this.busAsignado = busAsignado;
+    public void setDestinos(List<Destino> destinoSeleccionado) {
+        this.destinos = destinos;
+    }
+
+    public List<Bus> getBuses(List<Bus> busSeleccionado) {
+        return buses;
+    }
+
+    public void setBuses(List<Bus> buses) {
+        this.buses = buses;
+    }
+
+    public List<Pasajero> getPasajeros(List<Pasajero> pasajerosRegistrados) {
+        return pasajeros;
     }
 
     public void setPasajeros(List<Pasajero> pasajeros) {

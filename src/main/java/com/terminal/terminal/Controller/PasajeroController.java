@@ -1,6 +1,6 @@
 package com.terminal.terminal.Controller;
 import com.terminal.terminal.Model.Pasajero;
-import com.terminal.terminal.service.IPasajero;
+import com.terminal.terminal.serviceInterface.IPasajero;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
