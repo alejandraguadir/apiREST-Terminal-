@@ -12,6 +12,10 @@ public interface IViajeService {
 
     List<Viaje> obtenerViajes();
 
+    void registrarPasajero(List<Pasajero> registroPasajeroEnBus);
+
+
+
 
 
 

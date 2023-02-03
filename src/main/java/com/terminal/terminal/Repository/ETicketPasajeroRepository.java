@@ -1,24 +1,24 @@
 package com.terminal.terminal.Repository;
 
-import com.terminal.terminal.Model.TiketPasajero;
+import com.terminal.terminal.Model.EticketPasajero;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 @Repository
-public class TiketPasajeroRepository {
-    private List<TiketPasajero> tiketPasajeros;
+public class ETicketPasajeroRepository {
+    private List<EticketPasajero> tiketPasajeros;
 
-    public TiketPasajeroRepository(){
+    public ETicketPasajeroRepository(){
         this.tiketPasajeros = new ArrayList<>();
 
     }
 
-    public List<TiketPasajero> obtenerTiketPasajeros(){
+    public List<EticketPasajero> obtenerTiketPasajeros(){
         return this.tiketPasajeros;
     }
 
-    public void registrarTiket(TiketPasajero tiketPasajero){
+    public void registrarTiket(EticketPasajero tiketPasajero){
         tiketPasajeros.add(tiketPasajero);
     }
 }

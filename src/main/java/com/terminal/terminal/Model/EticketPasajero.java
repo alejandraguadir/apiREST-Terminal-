@@ -3,13 +3,13 @@ package com.terminal.terminal.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TiketPasajero {
+public class EticketPasajero {
 
     private String id;
     private String date;
-    private List<Bus> puestosBus;
+    private List<Pasajero> puestosBus;
 
-    public TiketPasajero(String id, String date, List<Bus> puestosBus) {
+    public EticketPasajero(String id, String date) {
         this.id = id;
         this.date = date;
         this.puestosBus = new ArrayList<>();;
@@ -31,11 +31,11 @@ public class TiketPasajero {
         this.date = date;
     }
 
-    public List<Bus> getPuestosBus() {
+    public List<Pasajero> getPuestosBus() {
         return puestosBus;
     }
 
-    public void setPuestosBus(List<Bus> puestosBus) {
+    public void setPuestosBus(List<Pasajero> puestosBus) {
         this.puestosBus = puestosBus;
     }
 }

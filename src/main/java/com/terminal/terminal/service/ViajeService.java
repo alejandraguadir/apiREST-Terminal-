@@ -2,8 +2,10 @@ package com.terminal.terminal.service;
 
 import com.terminal.terminal.Model.Bus;
 import com.terminal.terminal.Model.Pasajero;
+import com.terminal.terminal.Model.EticketPasajero;
 import com.terminal.terminal.Model.Viaje;
 import com.terminal.terminal.Repository.BusRepository;
+import com.terminal.terminal.Repository.ETicketPasajeroRepository;
 import com.terminal.terminal.Repository.TerminalRepository;
 import com.terminal.terminal.Repository.ViajeRepository;
 import com.terminal.terminal.serviceInterface.IViajeService;
@@ -32,6 +34,9 @@ public class ViajeService implements IViajeService {
     @Autowired
     private ViajeRepository viajeRepository;
 
+    @Autowired
+    private ETicketPasajeroRepository eTicketRepository;
+
 
 
     @Override
@@ -48,6 +53,18 @@ public class ViajeService implements IViajeService {
         return viajeRepository.obtenerViajes();
     }
 
+    @Override
+    public void registrarPasajero(List<Pasajero> registroPasajeroEnBus) {
+        EticketPasajero nuevoRegistroPasajero = new EticketPasajero(UUID.randomUUID().toString(), new Date().toString());
+        nuevoRegistroPasajero.setPuestosBus(registroPasajeroEnBus);
+        registroPasajeroEnBus.stream().forEach(puesto ->{
+            terminalRepository.disminuirCapacidad(puesto.getId());
+
+        });
+        eTicketRepository.registrarTiket(nuevoRegistroPasajero);
+
+
+    }
 
 
 }

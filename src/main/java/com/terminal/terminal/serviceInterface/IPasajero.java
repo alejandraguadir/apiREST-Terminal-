@@ -1,8 +1,6 @@
 package com.terminal.terminal.serviceInterface;
 
-import com.terminal.terminal.Model.Bus;
 import com.terminal.terminal.Model.Pasajero;
-import com.terminal.terminal.Model.TiketPasajero;
 
 import java.util.List;
 
