@@ -10,7 +10,7 @@ public interface IBus {
     Bus agregarBus(Bus bus);
     void eliminarBus(String id);
 
-    void registrarPasajerosEnBus(List<Bus> pasajerosRegistrados);
+
 
 
 }

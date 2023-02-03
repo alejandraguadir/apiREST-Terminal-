@@ -1,14 +1,10 @@
 package com.terminal.terminal.Controller;
 
-import com.terminal.terminal.Model.Bus;
-import com.terminal.terminal.Model.Destino;
 import com.terminal.terminal.serviceInterface.IViajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * Clase de un controlador REST

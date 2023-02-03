@@ -35,11 +35,14 @@ public class BusService implements IBus {
 
     //Agrega un nuevo objeto de tipo Bus al repositorio, generando un identificador
     // único para este objeto mediante la clase UUID.
+
     @Override
     public Bus agregarBus(Bus bus) {
         Bus addBus = new Bus(UUID.randomUUID().toString(),
-                bus.getPlaca()
-        );
+                bus.getPlaca(),
+                bus.getCapacidad(),
+                bus.getLugarDestino(),
+                bus.getCostoViaje());
         terminalRepository.agregarBus(addBus);
         return addBus;
 
@@ -53,16 +56,4 @@ public class BusService implements IBus {
     }
 
 
-    @Override
-    public void registrarPasajerosEnBus(List<Bus> pasajerosRegistrados) {
-        Bus registroPasajeros = new Bus(UUID.randomUUID().toString(), new Date().toString());
-        registroPasajeros.setPasajeros(pasajerosRegistrados);
-        pasajerosRegistrados.stream().forEach(puesto ->{
-            terminalRepository.disminuirCapacidad(puesto.getId());
-        });
-        busRepository.registrarPasajeroEnBus(registroPasajeros);
-
-
-
-    }
 }
