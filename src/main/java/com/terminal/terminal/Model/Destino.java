@@ -1,18 +1,29 @@
 package com.terminal.terminal.Model;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalTime;
-
+/**
+ * Clase que representa un objeto Destino.
+ */
 public class Destino {
+    /**
+     * Atributos de clase Destino.
+     */
     private String id;
     private LocalDate fechaDeSalida;
-
     private LocalTime horaSalida;
     private String lugarDestino;
     private double costoViaje;
 
-
+    /**
+     * Constructor para crear un objeto Destino.
+     *
+     * @param id identificador del destino.
+     * @param fechaDeSalida fecha de salida del destino.
+     * @param horaSalida hora de salida del destino.
+     * @param lugarDestino lugar de destino.
+     * @param costoViaje costo $ del viaje.
+     */
     public Destino(String id, LocalDate fechaDeSalida, LocalTime horaSalida, String lugarDestino, double costoViaje) {
         this.id = id;
         this.fechaDeSalida = fechaDeSalida;
@@ -20,9 +31,8 @@ public class Destino {
         this.lugarDestino = lugarDestino;
         this.costoViaje = costoViaje;
     }
-
     /**
-     * Constructor
+     * Consultores y Modificares
      */
     public String getId() {
         return id;

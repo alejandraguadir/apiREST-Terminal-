@@ -3,24 +3,33 @@ package com.terminal.terminal.Model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase que representa un objeto Viaje.
+ */
 public class Viaje {
+    /**
+     * Atributos de clase Viaje.
+     */
     private String id;
     private String date;
     private List<Destino> destinos;
     private List<Bus> buses;
     private List<Pasajero> pasajeros;
 
-
     /**
- * Constructor
- */
+     * Constructor para crear un objeto Viaje.
+     *
+     * @param id   identificador del viaje.
+     * @param date fecha del viaje.
+     */
+
 
     public Viaje(String id, String date) {
         this.id = id;
         this.date = date;
-        this.destinos=  new ArrayList<>();
-        this.buses =  new ArrayList<>();
-        this.pasajeros=  new ArrayList<>();
+        this.destinos = new ArrayList<>();
+        this.buses = new ArrayList<>();
+        this.pasajeros = new ArrayList<>();
     }
 
     /**

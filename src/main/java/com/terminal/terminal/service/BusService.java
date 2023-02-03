@@ -9,19 +9,27 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Clase de servicio para manejar la lógica de negocios relacionada con objetos de tipo Bus.
+ * Actúa como intermediario entre la lógica de la aplicación y el repositorio (capa de datos).
+ */
 @Service
 public class BusService implements IBus {
 
+    /**
+     * Acceder a los métodos de repositorio para realizar operaciones de CRUD en la base de datos.
+     **/
     @Autowired
     private TerminalRepository terminalRepository;
 
-    //Metodo para obtener buses
+    //Devuelve una lista de objetos de tipo Bus desde el repositorio.
     @Override
     public List<Bus> obtenerBuses() {
         return terminalRepository.mostrarBuses();
     }
 
-    //Metodo para agregar buses
+    //Agrega un nuevo objeto de tipo Bus al repositorio, generando un identificador
+    // único para este objeto mediante la clase UUID.
     @Override
     public Bus agregarBus(Bus bus) {
         Bus addBus = new Bus(UUID.randomUUID().toString(),
@@ -33,6 +41,7 @@ public class BusService implements IBus {
 
     }
 
+    //Elimina un objeto de tipo Bus del repositorio, dado su identificador.
     @Override
     public void eliminarBus(String id) {
         terminalRepository.eliminarBus(id);

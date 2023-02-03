@@ -10,8 +10,8 @@ import java.util.List;
 public interface IViajeService {
 
     //void registrarViaje(List<Bus> busSeleccionado, List<Destino> destinoSeleccionado, List<Pasajero> pasajerosRegistrados);
-    void registrarDestinoDeBus(List<Bus> busSeleccionado, List<Destino> destinoSeleccionado);
-   // void registrarPasajeroEnBus(List<Bus> busSeleccionado,  List<Pasajero> pasajerosRegistrados);
+    void registrarViaje(List<Bus> busSeleccionado, List<Destino> destinoSeleccionado);
+
     List<Viaje> obtenerViajes();
 
 
