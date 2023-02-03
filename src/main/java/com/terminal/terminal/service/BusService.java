@@ -1,11 +1,13 @@
 package com.terminal.terminal.service;
 
 import com.terminal.terminal.Model.Bus;
+import com.terminal.terminal.Repository.BusRepository;
 import com.terminal.terminal.Repository.TerminalRepository;
 import com.terminal.terminal.serviceInterface.IBus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,6 +24,9 @@ public class BusService implements IBus {
     @Autowired
     private TerminalRepository terminalRepository;
 
+    @Autowired
+    private BusRepository busRepository;
+
     //Devuelve una lista de objetos de tipo Bus desde el repositorio.
     @Override
     public List<Bus> obtenerBuses() {
@@ -33,8 +38,8 @@ public class BusService implements IBus {
     @Override
     public Bus agregarBus(Bus bus) {
         Bus addBus = new Bus(UUID.randomUUID().toString(),
-                bus.getPlaca(),
-                bus.getCapacidad());
+                bus.getPlaca()
+        );
         terminalRepository.agregarBus(addBus);
         return addBus;
 
@@ -45,5 +50,19 @@ public class BusService implements IBus {
     @Override
     public void eliminarBus(String id) {
         terminalRepository.eliminarBus(id);
+    }
+
+
+    @Override
+    public void registrarPasajerosEnBus(List<Bus> pasajerosRegistrados) {
+        Bus registroPasajeros = new Bus(UUID.randomUUID().toString(), new Date().toString());
+        registroPasajeros.setPasajeros(pasajerosRegistrados);
+        pasajerosRegistrados.stream().forEach(puesto ->{
+            terminalRepository.disminuirCapacidad(puesto.getId());
+        });
+        busRepository.registrarPasajeroEnBus(registroPasajeros);
+
+
+
     }
 }

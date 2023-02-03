@@ -38,11 +38,12 @@ public class viajeController {
     /**
      * Maneja una solicitud POST a la ruta "api/v1/crearViaje" y
      * acepta un cuerpo en formato JSON con una lista de objetos "Bus" y una lista de objetos "Destino".
+     @PostMapping("/crearViaje")
+     public ResponseEntity agregarViaje(@RequestBody List<Bus> buses, List<Destino> destinos) {
+     serviceViaje.registrarViaje(buses, destinos);
+     return new ResponseEntity(HttpStatus.CREATED);
+     }
      */
-    @PostMapping("/crearViaje")
-    public ResponseEntity agregarViaje(@RequestBody List<Bus> buses, List<Destino> destinos) {
-        serviceViaje.registrarViaje(buses, destinos);
-        return new ResponseEntity(HttpStatus.CREATED);
-    }
+
 
 }

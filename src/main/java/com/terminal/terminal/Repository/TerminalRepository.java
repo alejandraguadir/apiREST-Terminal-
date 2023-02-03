@@ -30,7 +30,7 @@ public class TerminalRepository {
      */
     public TerminalRepository() {
         this.nombre = "Terminal Capital";
-        buses = new ArrayList<>(List.of(new Bus("1", "456A", 23)));
+        buses = new ArrayList<>(List.of(new Bus("b1", "34bv")));
 
         destinos = new ArrayList<>(List.of(new Destino("v1", LocalDate.of(2023, 2, 11), LocalTime.of(9, 30), "Bogotá", 855000.0)));
 
@@ -134,6 +134,16 @@ public class TerminalRepository {
         }).collect(Collectors.toList());
 
 
+    }
+
+    public void disminuirCapacidad(String id){
+        List<Bus> resultado = buses.stream().map(puesto -> {
+            if(puesto.getId().equals(id)){
+                puesto.disminuirPuestos();
+                return puesto;
+            }
+            return puesto;
+        }).collect(Collectors.toList());
     }
 
 }

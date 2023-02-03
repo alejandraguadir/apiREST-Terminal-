@@ -2,6 +2,9 @@ package com.terminal.terminal.Model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Clase que representa un objeto Destino.
  */
@@ -14,6 +17,8 @@ public class Destino {
     private LocalTime horaSalida;
     private String lugarDestino;
     private double costoViaje;
+
+    private List<Bus> buses;
 
     /**
      * Constructor para crear un objeto Destino.
@@ -30,12 +35,18 @@ public class Destino {
         this.horaSalida = horaSalida;
         this.lugarDestino = lugarDestino;
         this.costoViaje = costoViaje;
+        this.buses = new ArrayList<>();
+
     }
     /**
      * Consultores y Modificares
      */
     public String getId() {
         return id;
+    }
+
+    public Destino(List<Bus> buses) {
+        this.buses = buses;
     }
 
     public void setId(String id) {

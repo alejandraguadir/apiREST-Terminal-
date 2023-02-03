@@ -42,23 +42,23 @@ public class ViajeService implements IViajeService {
      *
      @Override
      public void registrarPasajeroEnBus(List<Bus> busSeleccionado, List<Pasajero> pasajerosRegistrados) {
+     //// Método para registrar un viaje
+     @Override
+     public void registrarViaje(List<Bus> busSeleccionado, List<Destino> destinoSeleccionado) {
+     //Crea un nuevo viaje con un identificador único generado por UUID.
+     Viaje nuevoViaje = new Viaje(UUID.randomUUID().toString(),new Date().toString());
+     //Asigna el destino a cada uno de los buses seleccionados.
+     nuevoViaje.getBuses(busSeleccionado).stream().forEach(bus -> {
+     terminalRepository.asignarDestinoDeBus(bus.getId());
+     });
+     //Registra el viaje en el repositorio.
+     viajeRepository.registrarViaje(nuevoViaje);
 
+     }
      }
      */
 
-    //// Método para registrar un viaje
-    @Override
-    public void registrarViaje(List<Bus> busSeleccionado, List<Destino> destinoSeleccionado) {
-        //Crea un nuevo viaje con un identificador único generado por UUID.
-        Viaje nuevoViaje = new Viaje(UUID.randomUUID().toString(),new Date().toString());
-        //Asigna el destino a cada uno de los buses seleccionados.
-        nuevoViaje.getBuses(busSeleccionado).stream().forEach(bus -> {
-            terminalRepository.asignarDestinoDeBus(bus.getId());
-        });
-        //Registra el viaje en el repositorio.
-        viajeRepository.registrarViaje(nuevoViaje);
 
-    }
 
     // Método para obtener la lista de viajes registrados.
     @Override

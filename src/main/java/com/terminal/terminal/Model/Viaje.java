@@ -11,25 +11,24 @@ public class Viaje {
      * Atributos de clase Viaje.
      */
     private String id;
-    private String date;
-    private List<Destino> destinos;
+    private String fechaRegistro;
     private List<Bus> buses;
-    private List<Pasajero> pasajeros;
+
+
 
     /**
      * Constructor para crear un objeto Viaje.
      *
      * @param id   identificador del viaje.
-     * @param date fecha del viaje.
+     * @param fechaRegistro fecha del viaje.
      */
 
 
-    public Viaje(String id, String date) {
+    public Viaje(String id, String fechaRegistro) {
         this.id = id;
-        this.date = date;
-        this.destinos = new ArrayList<>();
+        this.fechaRegistro = fechaRegistro;
         this.buses = new ArrayList<>();
-        this.pasajeros = new ArrayList<>();
+
     }
 
     /**
@@ -44,35 +43,19 @@ public class Viaje {
         this.id = id;
     }
 
-    public String getDate() {
-        return date;
+    public String getFechaRegistro() {
+        return fechaRegistro;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setFechaRegistro(String fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
 
-    public List<Destino> getDestinos() {
-        return destinos;
-    }
-
-    public void setDestinos(List<Destino> destinoSeleccionado) {
-        this.destinos = destinos;
-    }
-
-    public List<Bus> getBuses(List<Bus> busSeleccionado) {
+    public List<Bus> getBuses() {
         return buses;
     }
 
     public void setBuses(List<Bus> buses) {
         this.buses = buses;
-    }
-
-    public List<Pasajero> getPasajeros(List<Pasajero> pasajerosRegistrados) {
-        return pasajeros;
-    }
-
-    public void setPasajeros(List<Pasajero> pasajeros) {
-        this.pasajeros = pasajeros;
     }
 }
