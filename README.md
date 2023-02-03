@@ -4,15 +4,15 @@ Model donde se crea las clases que representa a los objetos Bus, EticketPasajero
 
 ### Para la ejecución del api Rest, se definieron las siguientes peticiones desde un localhost:
 #### Gestión de buses
-GET: localhost:8001/api/v1/buses
-DELETE: localhost:8001/api/v1/bus/{id}
-POST: localhost:8001/api/v1/bus
+# GET: localhost:8001/api/v1/buses
+# DELETE: localhost:8001/api/v1/bus/{id}
+# POST: localhost:8001/api/v1/bus
 #### Gestión de pasajeros
-POST:  localhost:8001/api/v1/pasajero
-DELETE: localhost:8001/api/v1/{id}
-GET: localhost:8001/api/v1/pasajeros
+# POST:  localhost:8001/api/v1/pasajero
+# DELETE: localhost:8001/api/v1/{id}
+# GET: localhost:8001/api/v1/pasajeros
 #### Gestión de viajes
-Devuelve viajes registrados, GET: localhost:8001/api/v1/viaje
-Devuelve personas registradas en un viaje, GET: localhost:8001/api/v1/pasajerosParaViajar
-Agrega un bus a viaje, POST: localhost:8001/api/v1/crearViaje/{id}
-Agrega pasajeros a un bus, POST localhost:8001/api/v1/addPasajero/{id}
+# Devuelve viajes registrados, GET: localhost:8001/api/v1/viaje
+# Devuelve personas registradas en un viaje, GET: localhost:8001/api/v1/pasajerosParaViajar
+# Agrega un bus a viaje, POST: localhost:8001/api/v1/crearViaje/{id}
+# Agrega pasajeros a un bus, POST localhost:8001/api/v1/addPasajero/{id}
