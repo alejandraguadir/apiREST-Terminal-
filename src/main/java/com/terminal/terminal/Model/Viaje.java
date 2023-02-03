@@ -28,7 +28,6 @@ public class Viaje {
         this.id = id;
         this.fechaRegistro = fechaRegistro;
         this.buses = new ArrayList<>();
-
     }
 
     /**
@@ -54,8 +53,7 @@ public class Viaje {
     public List<Bus> getBuses() {
         return buses;
     }
-
-    public void setBuses(List<Pasajero> buses) {
+    public void setBuses(List<Bus> buses) {
         this.buses = buses;
     }
 

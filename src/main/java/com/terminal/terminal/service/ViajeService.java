@@ -32,15 +32,14 @@ public class ViajeService implements IViajeService {
     @Autowired
     private ViajeRepository viajeRepository;
 
-    @Override
-    public void registrarViaje(List<Pasajero> registroPasajeros) {
-        Viaje nuevoViaje = new Viaje(UUID.randomUUID().toString(), new Date().toString());
-        nuevoViaje.setBuses(registroPasajeros);
-        registroPasajeros.stream().forEach(puestos -> {
-            terminalRepository.disminuirCapacidad(puestos.getId());
-        });
 
-        viajeRepository.registrarViaje(nuevoViaje);
+
+    @Override
+    public void registrarViaje(List<Bus> registroBusParaViajar) {
+        Viaje viaje = new Viaje(UUID.randomUUID().toString(), new Date().toString());
+        viaje.setBuses(registroBusParaViajar);
+
+        viajeRepository.registrarViaje(viaje);
 
     }
 

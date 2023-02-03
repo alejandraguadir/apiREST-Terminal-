@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IViajeService {
 
-    void registrarViaje(List<Pasajero> registroPasajeros);
+    void registrarViaje(List<Bus> registroBusParaViajar);
 
     List<Viaje> obtenerViajes();
 
