@@ -31,10 +31,12 @@ public class viajeController {
     public ResponseEntity obtenerViajes() {
         return new ResponseEntity(serviceViaje.obtenerViajes(), HttpStatus.FOUND);
     }
+
     @GetMapping("/pasajerosParaViajar")
     public ResponseEntity obtenerPasajerosParaViajar() {
         return new ResponseEntity(serviceViaje.pasajerosParaViajar(), HttpStatus.FOUND);
     }
+
     @PostMapping("/crearViaje")
     public ResponseEntity agregarViaje(@RequestBody List<Bus> buses) {
         serviceViaje.registrarViaje(buses);
@@ -42,7 +44,7 @@ public class viajeController {
     }
 
     @PostMapping("/addPasajero")
-    public ResponseEntity registrarPasajero(@RequestBody List<Pasajero> pasajeros){
+    public ResponseEntity registrarPasajero(@RequestBody List<Pasajero> pasajeros) {
         serviceViaje.registrarPasajero(pasajeros);
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }

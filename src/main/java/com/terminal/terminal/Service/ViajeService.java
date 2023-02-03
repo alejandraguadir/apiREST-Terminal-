@@ -1,4 +1,4 @@
-package com.terminal.terminal.service;
+package com.terminal.terminal.Service;
 
 import com.terminal.terminal.Model.Bus;
 import com.terminal.terminal.Model.Pasajero;
@@ -41,7 +41,7 @@ public class ViajeService implements IViajeService {
 
     @Override
     public void registrarViaje(List<Bus> registroBusParaViajar) {
-        Viaje nuevoViaje = new Viaje(UUID.randomUUID().toString(), new Date().toString(), new String());
+        Viaje nuevoViaje = new Viaje(UUID.randomUUID().toString(), new Date().toString());
         nuevoViaje.setBuses(registroBusParaViajar);
         viajeRepository.registrarViaje(nuevoViaje);
 

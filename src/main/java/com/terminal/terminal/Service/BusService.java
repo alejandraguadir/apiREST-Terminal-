@@ -1,4 +1,4 @@
-package com.terminal.terminal.service;
+package com.terminal.terminal.Service;
 
 import com.terminal.terminal.Model.Bus;
 import com.terminal.terminal.Repository.BusRepository;
