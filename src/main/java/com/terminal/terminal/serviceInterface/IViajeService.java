@@ -8,7 +8,9 @@ import com.terminal.terminal.Model.Viaje;
 import java.util.List;
 
 public interface IViajeService {
-
+    /**
+     * Métodos para implementar en la clase viajeService.
+     */
     void registrarViaje(List<Bus> registroBusParaViajar);
 
     List<Viaje> obtenerViajes();

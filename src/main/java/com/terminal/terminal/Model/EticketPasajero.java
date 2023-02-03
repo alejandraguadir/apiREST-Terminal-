@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EticketPasajero {
-
+    /**
+     * Atributos de clase EticketPasajero
+     */
     private String id;
     private String date;
     private List<Pasajero> puestosBus;
-
+/**
+ * Constructor para crear un objeto EticketPasajero.
+ */
     public EticketPasajero(String id, String date) {
         this.id = id;
         this.date = date;
-        this.puestosBus = new ArrayList<>();;
+        this.puestosBus = new ArrayList<>();
     }
 
     public String getId() {

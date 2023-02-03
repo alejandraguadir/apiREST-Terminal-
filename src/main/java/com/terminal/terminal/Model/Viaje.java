@@ -16,18 +16,13 @@ public class Viaje {
     private List<Bus> buses;
 
 
-
     /**
      * Constructor para crear un objeto Viaje.
-     *
-     * @param id   identificador del viaje.
-     * @param fechaRegistro fecha del viaje.
      */
 
 
     public Viaje(String id, String fechaRegistro) {
         this.id = id;
-
         this.fechaRegistro = fechaRegistro;
         this.buses = new ArrayList<>();
     }
@@ -39,7 +34,6 @@ public class Viaje {
     public String getId() {
         return id;
     }
-
 
 
     public void setId(String id) {
@@ -57,6 +51,7 @@ public class Viaje {
     public List<Bus> getBuses() {
         return buses;
     }
+
     public void setBuses(List<Bus> buses) {
         this.buses = buses;
     }
