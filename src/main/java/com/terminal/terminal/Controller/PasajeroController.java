@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Clase de un controlador REST
  */
@@ -21,6 +23,8 @@ public class PasajeroController {
      */
     @Autowired
     private IPasajero servicePasajero;
+
+
 
     /**
      * Maneja una solicitud GET a la ruta "api/v1/pasajeros" y devuelve una respuesta HTTP con el
@@ -49,6 +53,9 @@ public class PasajeroController {
         servicePasajero.eliminarPasajero(id);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+
+
 
 
 }

@@ -66,5 +66,10 @@ public class ViajeService implements IViajeService {
 
     }
 
+    @Override
+    public List<EticketPasajero> pasajerosParaViajar() {
+        return eTicketRepository.obtenerTiketPasajeros();
+    }
+
 
 }
