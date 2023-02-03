@@ -12,6 +12,8 @@ public class Viaje {
      */
     private String id;
     private String fechaRegistro;
+
+    private String destino;
     private List<Bus> buses;
 
 
@@ -24,8 +26,9 @@ public class Viaje {
      */
 
 
-    public Viaje(String id, String fechaRegistro) {
+    public Viaje(String id, String destino, String fechaRegistro) {
         this.id = id;
+        this.destino=destino;
         this.fechaRegistro = fechaRegistro;
         this.buses = new ArrayList<>();
     }
@@ -36,6 +39,14 @@ public class Viaje {
 
     public String getId() {
         return id;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
     }
 
     public void setId(String id) {

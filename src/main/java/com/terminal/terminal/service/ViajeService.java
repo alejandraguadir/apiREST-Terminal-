@@ -36,10 +36,9 @@ public class ViajeService implements IViajeService {
 
     @Override
     public void registrarViaje(List<Bus> registroBusParaViajar) {
-        Viaje viaje = new Viaje(UUID.randomUUID().toString(), new Date().toString());
-        viaje.setBuses(registroBusParaViajar);
-
-        viajeRepository.registrarViaje(viaje);
+        Viaje nuevoViaje = new Viaje(UUID.randomUUID().toString(), new Date().toString(), new String());
+        nuevoViaje.setBuses(registroBusParaViajar);
+        viajeRepository.registrarViaje(nuevoViaje);
 
     }
 

@@ -1,11 +1,15 @@
 package com.terminal.terminal.service;
 
+import com.terminal.terminal.Model.Bus;
 import com.terminal.terminal.Model.Pasajero;
+import com.terminal.terminal.Model.TiketPasajero;
 import com.terminal.terminal.Repository.TerminalRepository;
+import com.terminal.terminal.Repository.TiketPasajeroRepository;
 import com.terminal.terminal.serviceInterface.IPasajero;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,6 +24,10 @@ public class PasajeroService implements IPasajero {
      **/
     @Autowired
     private TerminalRepository terminalRepository;
+
+    @Autowired
+    private TiketPasajeroRepository tiketPasajeroRepository;
+
 
 
     //Devuelve una lista de pasajeros almacenados en el repositorio de
@@ -45,6 +53,8 @@ public class PasajeroService implements IPasajero {
         terminalRepository.eliminarPasajero(id);
         //terminalRepository.mostrarPasajeros().removeIf(p -> p.getId().equals(id));
     }
+
+
 
 
 
