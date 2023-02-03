@@ -1,6 +1,7 @@
 package com.terminal.terminal.service;
 
 import com.terminal.terminal.Model.Bus;
+import com.terminal.terminal.Model.Pasajero;
 import com.terminal.terminal.Model.Viaje;
 import com.terminal.terminal.Repository.BusRepository;
 import com.terminal.terminal.Repository.TerminalRepository;
@@ -28,19 +29,27 @@ public class ViajeService implements IViajeService {
     @Autowired
     private TerminalRepository terminalRepository;
 
-      // Método para obtener la lista de viajes registrados.
+    @Autowired
+    private ViajeRepository viajeRepository;
 
     @Override
-    public void registrarPasajerosEnBus(List<Bus> pasajeros) {
-    Bus registroPasajero = new Bus(UUID.randomUUID().toString());
-        registroPasajero.setPasajeros(pasajeros);
-        pasajeros.stream().forEach(puesto ->{
-            terminalRepository.disminuirCapacidad(puesto.getId());
+    public void registrarViaje(List<Pasajero> registroPasajeros) {
+        Viaje nuevoViaje = new Viaje(UUID.randomUUID().toString(), new Date().toString());
+        nuevoViaje.setBuses(registroPasajeros);
+        registroPasajeros.stream().forEach(puestos -> {
+            terminalRepository.disminuirCapacidad(puestos.getId());
         });
-        busRepository.registrarPasajeroEnBus(registroPasajero);
 
+        viajeRepository.registrarViaje(nuevoViaje);
 
     }
+
+    // Método para obtener la lista de viajes registrados.
+    @Override
+    public List<Viaje> obtenerViajes() {
+        return viajeRepository.obtenerViajes();
+    }
+
 
 
 }

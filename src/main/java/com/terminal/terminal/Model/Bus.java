@@ -19,21 +19,15 @@ public class Bus {
 
     private List<Bus> pasajeros;
 
-    public Bus() {
-    }
 
-    public Bus(String id, String placa, int capacidad, String lugarDestino, double costoViaje) {
+    public Bus(String id, String date, String placa, int capacidad, String lugarDestino, double costoViaje) {
         this.id = id;
+        this.date = date;
         this.placa = placa;
         this.capacidad = capacidad;
         this.lugarDestino = lugarDestino;
         this.costoViaje = costoViaje;
-        this.pasajeros = new ArrayList<Bus>();
-    }
-
-
-
-    public Bus(String s) {
+        this.pasajeros = new ArrayList<>();
     }
 
     public String getId() {
@@ -42,6 +36,14 @@ public class Bus {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getPlaca() {
@@ -68,20 +70,6 @@ public class Bus {
         this.lugarDestino = lugarDestino;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public void setPasajeros(List<Bus> pasajeros) {
-        this.pasajeros = pasajeros;
-    }
-
-
-
     public double getCostoViaje() {
         return costoViaje;
     }
@@ -94,8 +82,9 @@ public class Bus {
         return pasajeros;
     }
 
-
-
+    public void setPasajeros(List<Bus> pasajeros) {
+        this.pasajeros = pasajeros;
+    }
 
     public void disminuirPuestos(){
         this.capacidad --;

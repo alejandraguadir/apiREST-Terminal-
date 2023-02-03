@@ -55,7 +55,8 @@ public class Viaje {
         return buses;
     }
 
-    public void setBuses(List<Bus> buses) {
+    public void setBuses(List<Pasajero> buses) {
         this.buses = buses;
     }
+
 }

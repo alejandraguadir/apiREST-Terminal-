@@ -27,7 +27,7 @@ public class TerminalRepository {
      */
     public TerminalRepository() {
         this.nombre = "Terminal Capital";
-        buses = new ArrayList<>(List.of(new Bus("b1", "34bv", 34, "Cali", 90000.0)));
+        buses = new ArrayList<>(List.of(new Bus("b1", "2023/02/4:12:00","34bv", 34, "Cali", 90000.0)));
 
         pasajeros = new ArrayList<>(List.of(new Pasajero("p1", "Ana", "Rivera")));
     }

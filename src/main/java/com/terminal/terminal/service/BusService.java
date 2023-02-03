@@ -36,9 +36,11 @@ public class BusService implements IBus {
     //Agrega un nuevo objeto de tipo Bus al repositorio, generando un identificador
     // único para este objeto mediante la clase UUID.
 
+
+
     @Override
     public Bus agregarBus(Bus bus) {
-        Bus addBus = new Bus(UUID.randomUUID().toString(),
+        Bus addBus = new Bus(UUID.randomUUID().toString(), new Date().toString(),
                 bus.getPlaca(),
                 bus.getCapacidad(),
                 bus.getLugarDestino(),
