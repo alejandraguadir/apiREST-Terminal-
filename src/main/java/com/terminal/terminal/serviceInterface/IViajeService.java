@@ -6,8 +6,13 @@ import com.terminal.terminal.Model.Viaje;
 import java.util.List;
 
 public interface IViajeService {
-    List<Viaje> obtenerViajes();
-    //void registrarPasajerosEnBus(List<Bus> pasajeros);
+
+    void registrarPasajerosEnBus(List<Bus> pasajeros);
+
+
+
+
+
 
 
 }

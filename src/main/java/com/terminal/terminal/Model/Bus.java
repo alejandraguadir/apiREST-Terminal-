@@ -11,13 +11,16 @@ public class Bus {
      * Atributos de clase Bus.
      */
     private String id;
+    private String date;
     private String placa;
     private int capacidad;
     private String lugarDestino;
     private double costoViaje;
 
-    private List<Pasajero> pasajeros;
+    private List<Bus> pasajeros;
 
+    public Bus() {
+    }
 
     public Bus(String id, String placa, int capacidad, String lugarDestino, double costoViaje) {
         this.id = id;
@@ -25,11 +28,12 @@ public class Bus {
         this.capacidad = capacidad;
         this.lugarDestino = lugarDestino;
         this.costoViaje = costoViaje;
-        this.pasajeros = new ArrayList<>();
-
+        this.pasajeros = new ArrayList<Bus>();
     }
 
-    public Bus() {
+
+
+    public Bus(String s) {
     }
 
     public String getId() {
@@ -64,6 +68,20 @@ public class Bus {
         this.lugarDestino = lugarDestino;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setPasajeros(List<Bus> pasajeros) {
+        this.pasajeros = pasajeros;
+    }
+
+
+
     public double getCostoViaje() {
         return costoViaje;
     }
@@ -72,7 +90,7 @@ public class Bus {
         this.costoViaje = costoViaje;
     }
 
-    public List<Pasajero> getPasajeros() {
+    public List<Bus> getPasajeros() {
         return pasajeros;
     }
 

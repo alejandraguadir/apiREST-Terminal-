@@ -25,11 +25,12 @@ public class viajeController {
     /**
      * Maneja una solicitud GET a la ruta "api/v1/viajes" y
      * devuelve una respuesta HTTP con el resultado del método "obtenerViajes" del servicio de viaje.
+     *    @GetMapping("viajes")
+     *     public ResponseEntity obtenerViajes() {
+     *         return new ResponseEntity(serviceViaje.obtenerViajes(), HttpStatus.FOUND);
+     *     }
      */
-    @GetMapping("viajes")
-    public ResponseEntity obtenerViajes() {
-        return new ResponseEntity(serviceViaje.obtenerViajes(), HttpStatus.FOUND);
-    }
+
 
     /**
      * Maneja una solicitud POST a la ruta "api/v1/crearViaje" y
