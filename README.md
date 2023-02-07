@@ -14,5 +14,5 @@ Model donde se crea las clases que representa a los objetos Bus, EticketPasajero
 #### Gestión de viajes
 #### Devuelve viajes registrados, GET: localhost:8001/api/v1/viaje
 #### Devuelve personas registradas en un viaje, GET: localhost:8001/api/v1/pasajerosParaViajar
-#### Agrega un bus a viaje, POST: localhost:8001/api/v1/crearViaje/{id}
-####  Agrega pasajeros a un bus, POST localhost:8001/api/v1/addPasajero/{id}
+#### Agrega un bus a viaje, POST: localhost:8001/api/v1/crearViaje
+####  Agrega pasajeros a un bus, POST localhost:8001/api/v1/addPasajero
