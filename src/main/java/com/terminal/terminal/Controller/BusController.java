@@ -23,6 +23,8 @@ public class BusController {
     private IBus serviceBus;
 
     /**
+     *
+     * pETICIÓN GET
      * Maneja una solicitud GET a la ruta "api/v1/buses" y devuelve una respuesta HTTP con el
      * resultado del método "obtenerBuses" del servicio de buses.
      */
