@@ -4,6 +4,7 @@ Model donde se crea las clases que representa a los objetos Bus, EticketPasajero
 
 ### Para la ejecución del api Rest, se definieron las siguientes peticiones desde un localhost:
 #### Gestión de buses
+pst
 #### GET: localhost:8001/api/v1/buses
 #### DELETE: localhost:8001/api/v1/bus/{id}
 #### POST: localhost:8001/api/v1/bus
